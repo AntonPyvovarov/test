@@ -13,6 +13,9 @@
       <executable />
     </execution>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
       <path value="$PROJECT_DIR$/vendor/sebastian/comparator" />
@@ -111,6 +114,7 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1aD6aX8dXCqRntMI5TfLGgXNECC" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -138,11 +142,21 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1586257880071</updated>
-      <workItem from="1586257882580" duration="1379000" />
+      <workItem from="1586257882580" duration="2100000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="259" y="311" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1586262282147">
+      <screen x="62" y="27" width="1858" height="1053" />
+    </state>
+    <state x="259" y="311" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/62.27.1858.1053@62.27.1858.1053" timestamp="1586262282147" />
+    <state x="309" y="311" width="424" height="491" key="FileChooserDialogImpl" timestamp="1586262109312">
+      <screen x="62" y="27" width="1858" height="1053" />
+    </state>
+    <state x="309" y="311" width="424" height="491" key="FileChooserDialogImpl/62.27.1858.1053@62.27.1858.1053" timestamp="1586262109312" />
   </component>
 </project>
