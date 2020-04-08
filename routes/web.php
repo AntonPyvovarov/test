@@ -25,4 +25,5 @@ Route::group(['namespace'=>'Product'],function (){
     Route::resource('products','ProductController');
 });
 
-Route::get('prod-cat/{$id}','Product\SortController@index');
+Route::get('prod-cat/','Product\SortController@index');
+Route::get('prod-cat/{$id?}','Product\SortController@sort');

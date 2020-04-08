@@ -1,21 +1,27 @@
-+--------+-----------+----------------------------+--------------------+----------------------------------------------------------+--------------+
-| Domain | Method    | URI                        | Name               | Action                                                   | Middleware   |
-+--------+-----------+----------------------------+--------------------+----------------------------------------------------------+--------------+
-|        | GET|HEAD  | /                          |                    | Closure                                                  | web          |
-|        | GET|HEAD  | api/user                   |                    | Closure                                                  | api,auth:api |
-|        | GET|HEAD  | categories                 | categories.index   | App\Http\Controllers\Category\CategoryController@index   | web          |
-|        | POST      | categories                 | categories.store   | App\Http\Controllers\Category\CategoryController@store   | web          |
-|        | GET|HEAD  | categories/create          | categories.create  | App\Http\Controllers\Category\CategoryController@create  | web          |
-|        | PUT|PATCH | categories/{category}      | categories.update  | App\Http\Controllers\Category\CategoryController@update  | web          |
-|        | DELETE    | categories/{category}      | categories.destroy | App\Http\Controllers\Category\CategoryController@destroy | web          |
-|        | GET|HEAD  | categories/{category}      | categories.show    | App\Http\Controllers\Category\CategoryController@show    | web          |
-|        | GET|HEAD  | categories/{category}/edit | categories.edit    | App\Http\Controllers\Category\CategoryController@edit    | web          |
-|        | GET|HEAD  | products                   | products.index     | App\Http\Controllers\Product\ProductController@index     | web          |
-|        | POST      | products                   | products.store     | App\Http\Controllers\Product\ProductController@store     | web          |
-|        | GET|HEAD  | products/create            | products.create    | App\Http\Controllers\Product\ProductController@create    | web          |
-|        | GET|HEAD  | products/{$id?}            |                    | App\Http\Controllers\Product\SortController@index        | web          |
-|        | GET|HEAD  | products/{product}         | products.show      | App\Http\Controllers\Product\ProductController@show      | web          |
-|        | PUT|PATCH | products/{product}         | products.update    | App\Http\Controllers\Product\ProductController@update    | web          |
-|        | DELETE    | products/{product}         | products.destroy   | App\Http\Controllers\Product\ProductController@destroy   | web          |
-|        | GET|HEAD  | products/{product}/edit    | products.edit      | App\Http\Controllers\Product\ProductController@edit      | web          |
-+--------+-----------+----------------------------+--------------------+----------------------------------------------------------+--------------+
++--------+-----------+-------------------------------+-----------------------+---------------------------------------------------------------+------------------------------------------------------+
+| Domain | Method    | URI                           | Name                  | Action                                                        | Middleware                                           |
++--------+-----------+-------------------------------+-----------------------+---------------------------------------------------------------+------------------------------------------------------+
+|        | GET|HEAD  | /                             |                       | Closure                                                       | web                                                  |
+|        | GET|HEAD  | _debugbar/assets/javascript   | debugbar.assets.js    | Barryvdh\Debugbar\Controllers\AssetController@js              | Barryvdh\Debugbar\Middleware\DebugbarEnabled,Closure |
+|        | GET|HEAD  | _debugbar/assets/stylesheets  | debugbar.assets.css   | Barryvdh\Debugbar\Controllers\AssetController@css             | Barryvdh\Debugbar\Middleware\DebugbarEnabled,Closure |
+|        | DELETE    | _debugbar/cache/{key}/{tags?} | debugbar.cache.delete | Barryvdh\Debugbar\Controllers\CacheController@delete          | Barryvdh\Debugbar\Middleware\DebugbarEnabled,Closure |
+|        | GET|HEAD  | _debugbar/clockwork/{id}      | debugbar.clockwork    | Barryvdh\Debugbar\Controllers\OpenHandlerController@clockwork | Barryvdh\Debugbar\Middleware\DebugbarEnabled,Closure |
+|        | GET|HEAD  | _debugbar/open                | debugbar.openhandler  | Barryvdh\Debugbar\Controllers\OpenHandlerController@handle    | Barryvdh\Debugbar\Middleware\DebugbarEnabled,Closure |
+|        | GET|HEAD  | _debugbar/telescope/{id}      | debugbar.telescope    | Barryvdh\Debugbar\Controllers\TelescopeController@show        | Barryvdh\Debugbar\Middleware\DebugbarEnabled,Closure |
+|        | GET|HEAD  | api/user                      |                       | Closure                                                       | api,auth:api                                         |
+|        | GET|HEAD  | categories                    | categories.index      | App\Http\Controllers\Category\CategoryController@index        | web                                                  |
+|        | POST      | categories                    | categories.store      | App\Http\Controllers\Category\CategoryController@store        | web                                                  |
+|        | GET|HEAD  | categories/create             | categories.create     | App\Http\Controllers\Category\CategoryController@create       | web                                                  |
+|        | DELETE    | categories/{category}         | categories.destroy    | App\Http\Controllers\Category\CategoryController@destroy      | web                                                  |
+|        | GET|HEAD  | categories/{category}         | categories.show       | App\Http\Controllers\Category\CategoryController@show         | web                                                  |
+|        | PUT|PATCH | categories/{category}         | categories.update     | App\Http\Controllers\Category\CategoryController@update       | web                                                  |
+|        | GET|HEAD  | categories/{category}/edit    | categories.edit       | App\Http\Controllers\Category\CategoryController@edit         | web                                                  |
+|        | GET|HEAD  | prod-cat/{$id}                |                       | App\Http\Controllers\Product\SortController@sort              | web                                                  |
+|        | GET|HEAD  | products                      | products.index        | App\Http\Controllers\Product\ProductController@index          | web                                                  |
+|        | POST      | products                      | products.store        | App\Http\Controllers\Product\ProductController@store          | web                                                  |
+|        | GET|HEAD  | products/create               | products.create       | App\Http\Controllers\Product\ProductController@create         | web                                                  |
+|        | GET|HEAD  | products/{product}            | products.show         | App\Http\Controllers\Product\ProductController@show           | web                                                  |
+|        | PUT|PATCH | products/{product}            | products.update       | App\Http\Controllers\Product\ProductController@update         | web                                                  |
+|        | DELETE    | products/{product}            | products.destroy      | App\Http\Controllers\Product\ProductController@destroy        | web                                                  |
+|        | GET|HEAD  | products/{product}/edit       | products.edit         | App\Http\Controllers\Product\ProductController@edit           | web                                                  |
++--------+-----------+-------------------------------+-----------------------+---------------------------------------------------------------+------------------------------------------------------+

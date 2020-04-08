@@ -15,7 +15,7 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $items = Product::all();
+        $items = Product::first();
         dd($items);
     }
 

@@ -8,16 +8,24 @@ use Illuminate\Http\Request;
 
 class SortController extends Controller
 {
-    public function index($id=null)
+    public function sort ($id)
     {
-
-        $query = Category::with(['products']);
+        $query = Category::find($id)->products->toArray();
         if (!isset($id)){
             return $query->find($id);
-
         }
         $items=$query->get();
         dd($items);
         return $items;
     }
+
+    public function index()
+    {
+        $query = Category::with(['products']);
+
+        $items=$query->get();
+        dd($items);
+        return $items;
+    }
+
 }
