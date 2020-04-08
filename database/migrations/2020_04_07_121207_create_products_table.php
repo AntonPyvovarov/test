@@ -21,6 +21,7 @@ class CreateProductsTable extends Migration
 
 
             $table->string('title');
+            $table->string('slug')->unique()->nullable();
             $table->string('price');
             //seo
             $table->string('description')->nullable();

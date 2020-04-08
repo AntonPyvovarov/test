@@ -16,3 +16,13 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::group(['namespace'=>'Category'],function (){
+    Route::resource('categories','CategoryController');
+});
+
+Route::group(['namespace'=>'Product'],function (){
+    Route::resource('products','ProductController');
+});
+
+Route::get('prod-cat/{$id}','Product\SortController@index');

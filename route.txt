@@ -6,13 +6,14 @@
 |        | GET|HEAD  | categories                 | categories.index   | App\Http\Controllers\Category\CategoryController@index   | web          |
 |        | POST      | categories                 | categories.store   | App\Http\Controllers\Category\CategoryController@store   | web          |
 |        | GET|HEAD  | categories/create          | categories.create  | App\Http\Controllers\Category\CategoryController@create  | web          |
-|        | GET|HEAD  | categories/{category}      | categories.show    | App\Http\Controllers\Category\CategoryController@show    | web          |
 |        | PUT|PATCH | categories/{category}      | categories.update  | App\Http\Controllers\Category\CategoryController@update  | web          |
 |        | DELETE    | categories/{category}      | categories.destroy | App\Http\Controllers\Category\CategoryController@destroy | web          |
+|        | GET|HEAD  | categories/{category}      | categories.show    | App\Http\Controllers\Category\CategoryController@show    | web          |
 |        | GET|HEAD  | categories/{category}/edit | categories.edit    | App\Http\Controllers\Category\CategoryController@edit    | web          |
 |        | GET|HEAD  | products                   | products.index     | App\Http\Controllers\Product\ProductController@index     | web          |
 |        | POST      | products                   | products.store     | App\Http\Controllers\Product\ProductController@store     | web          |
 |        | GET|HEAD  | products/create            | products.create    | App\Http\Controllers\Product\ProductController@create    | web          |
+|        | GET|HEAD  | products/{$id?}            |                    | App\Http\Controllers\Product\SortController@index        | web          |
 |        | GET|HEAD  | products/{product}         | products.show      | App\Http\Controllers\Product\ProductController@show      | web          |
 |        | PUT|PATCH | products/{product}         | products.update    | App\Http\Controllers\Product\ProductController@update    | web          |
 |        | DELETE    | products/{product}         | products.destroy   | App\Http\Controllers\Product\ProductController@destroy   | web          |
